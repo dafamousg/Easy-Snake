@@ -1,4 +1,4 @@
-import { SNAKE_SPEED } from './snake.js';
+import { SNAKE_SPEED, update as updateSnake, draw as drawSnake } from './snake.js';
 
 let lastRenderTime = 0;
 
@@ -10,7 +10,6 @@ function main(currentTime) {
   if (secondsSinceLastRender < 1 / SNAKE_SPEED)
     return;
 
-  console.log("Render");
   lastRenderTime = currentTime;
 
   update();
@@ -21,11 +20,10 @@ function main(currentTime) {
 
 window.requestAnimationFrame(main);
 
-
-function update() {
-
+function update(){
+  updateSnake();
 }
 
 function draw() {
-
+  drawSnake();
 }
