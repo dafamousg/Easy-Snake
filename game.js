@@ -1,6 +1,6 @@
-import { SNAKE_SPEED, update as updateSnake, draw as drawSnake, getSnakeHead, snakeIntersection } from './snake.js';
-import {update as updateFood, draw as drawFood} from './food.js';
-import {outsideGrid} from './grid.js';
+import { SNAKE_SPEED, update as updateSnake, draw as drawSnake, getSnakeHead, snakeIntersection } from './model/snake.js';
+import {update as updateFood, draw as drawFood} from './model/food.js';
+import {outsideGrid} from './model/grid.js';
 
 let lastRenderTime = 0;
 let gameOver = false;
